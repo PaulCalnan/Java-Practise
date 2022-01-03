@@ -29,5 +29,29 @@ public class Main {
         long myMaxLongValue = Long.MAX_VALUE;
         System.out.println("Long Minimum Value = " + myMinLongValue);
         System.out.println("Long Maximum Value = " + myMaxLongValue);
+
+        long bigLongLiteralValue = 2_147_483_647_234L;
+        System.out.println(bigLongLiteralValue);
+
+//        No problem with below as int is default and expression returns an int
+        int myTotal = (myMinIntValue / 2);
+
+//        Without using casting (byte) the below expression would result in error as java finds int variable when byte type is required
+        byte myNewByteValue = (byte) (myMinByteValue / 2);
+
+//        Without using casting (short) the below expression would result in error as java finds int variable when short type is required
+        short myNewShortValue = (short) (myMinShortValue / 2);
+        
+        byte myNewByteChallenge = (Byte.MAX_VALUE - 10);
+        System.out.println("Byte Challenge Value = " + myNewByteChallenge);
+
+        short myNewShortChallenge = (Short.MAX_VALUE - 10);
+        System.out.println("Short Challenge Value = " + myNewShortChallenge);
+
+        int myNewIntChallenge = (Integer.MAX_VALUE - 10);
+        System.out.println("Int Challenge Value = " + myNewIntChallenge);
+
+        long myNewLongChallenge = (50000L + 10L * (long) (myNewByteChallenge) + ((long) myNewShortChallenge + (long) myNewIntChallenge));
+        System.out.println("Long Challenge Value = " + myNewLongChallenge);
     }
 }
