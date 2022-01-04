@@ -36,10 +36,31 @@ public class Main {
         result -= 2;
         System.out.println("result = result - 2 = " + result);
 
-        boolean isAlien = true;
-        if ( isAlien == false)
+        boolean isAlien = false;
+        if ( isAlien == false) {
             System.out.println("It is not an alien!");
-        else
+        } else {
             System.out.println("It is an Alien!!");
+        }
+
+        int topScore = 80;
+        if (topScore < 100) {
+            System.out.println("You got the high score!");
+        }
+
+        int secondTopScore = 95;
+        if ((topScore > secondTopScore) && (topScore < 100)) {
+            System.out.println("Greater than second top score and less than 100");
+        }
+
+        if ((topScore > 90) || (secondTopScore <= 90)) {
+            System.out.println("Either or both of the conditions are true");
+        }
+
+        // this evaluates to true and prints the statement as the condition looks if a boolean is present via single =
+        boolean isCar = false;
+        if (isCar = true) { // could also write "if (isCar)" as a shortcut to check true or "if (!isCar)" to check false
+            System.out.println("This is not supposed to happen");
+        }
     }
 }
