@@ -1,5 +1,7 @@
 package com.company;
 
+import javax.xml.transform.stream.StreamSource;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -61,6 +63,15 @@ public class Main {
         boolean isCar = false;
         if (isCar = true) { // could also write "if (isCar)" as a shortcut to check true or "if (!isCar)" to check false
             System.out.println("This is not supposed to happen");
+        }
+
+        // ternary operator is a shortcut to assigning one of two values to a variable depending on a given condition.
+        isCar = true;
+        boolean wasCar = isCar ? true : false;
+        if (wasCar) {
+            System.out.println("wasCar is true");
+        } else {
+            System.out.println("wasCar is false");
         }
     }
 }
