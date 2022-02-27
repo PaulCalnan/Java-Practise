@@ -73,5 +73,27 @@ public class Main {
         } else {
             System.out.println("wasCar is false");
         }
+
+        int ageOfClient = 17;
+
+        boolean isEighteenOrOver = (ageOfClient >= 18) ? true : false;
+        if (isEighteenOrOver) {
+            System.out.println("Client is over 18");
+        } else {
+            System.out.println("Client is under 18");
+        }
+
+        double num1 = 20.00;
+        double num2 = 80.00;
+        double result1 = (num1 + num2) * 100.00;
+        double result2 = result1 % 41;
+
+        System.out.println("Add both numbers together and multiply by 100 = " + result1);
+        System.out.println("remainder from step one and 40.00 = " + result2);
+        boolean isZero = ((int) result2 == 0) ? true : false;
+        System.out.println("isZero = " + result2);
+        if(!isZero) {
+            System.out.println("remainder = " + result2);
+        }
     }
 }
